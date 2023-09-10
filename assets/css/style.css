@@ -6,6 +6,11 @@
   --primary-color: #0f1b4c;
 }
 
+html,
+body {
+  scroll-behavior: smooth;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -48,16 +53,26 @@ a {
 }
 /* ################ Header ################ */
 
-.header {
+.fixed-header {
   background-color: #e6f0ff;
-  height: 100vh;
+  padding-top: 25px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.hero-wrap {
+  background-color: #e6f0ff;
+  height: calc(100vh - 90px);
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .navbar {
   display: flex;
   align-items: center;
-  padding-top: 38px;
+  padding: 12px;
 }
 
 .navbar ul {
