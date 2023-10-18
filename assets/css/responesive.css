@@ -1,0 +1,163 @@
+/* PC */
+
+@media screen and (min-width: 992px) {
+  .header-mobile-tablet {
+    display: none;
+  }
+
+  .show-on-mobile {
+    display: none;
+  }
+}
+
+/* Tablet and mobile */
+@media screen and (max-width: 991px) {
+  .navbar ul {
+    display: none;
+  }
+
+  .navbar .logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .navbar .toggle-menu {
+    width: 24px;
+    height: 24px;
+  }
+
+  .menu-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity ease 0.2s, opacity visibility 0.2s;
+  }
+
+  .menu-drawer {
+    padding: 40px;
+    position: fixed;
+    inset: 0 60% 0 0;
+    background: #fff;
+    z-index: 2;
+    transform: translateX(-100%);
+    transition: transform ease 0.2s;
+  }
+
+  #menu-header:checked ~ .menu-overlay {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  #menu-header:checked ~ .menu-drawer {
+    transform: translateX(0);
+  }
+
+  #menu-tablet {
+    margin-top: 20px;
+    display: block;
+  }
+
+  #menu-tablet a {
+    display: block;
+    padding: 5px 0;
+    color: #333;
+  }
+
+  .hero .info {
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .hero .info .desc {
+    --line-clamp: 3;
+    width: 80%;
+    margin: 30px auto auto;
+  }
+
+  .hero .hero-img {
+    display: none;
+  }
+
+  .hero .info .hero-cta {
+    margin-top: 30px;
+  }
+
+  .clients .row {
+    flex-wrap: wrap;
+  }
+
+  .clients .row a {
+    width: 33.333%;
+  }
+
+  .list-guide .guide-item {
+    margin: auto;
+    flex: 1;
+  }
+
+  .featured .list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stats .row {
+    flex-direction: column;
+  }
+
+  .stats .info {
+    width: 100%;
+    order: 1;
+    padding: 0;
+  }
+
+  .stats .info .sub-title {
+    width: 100%;
+    height: auto;
+  }
+
+  .stats .info .desc {
+    width: 100%;
+  }
+
+  .stats .img-block {
+    margin-top: 40px;
+    order: 2;
+    width: 100%;
+  }
+
+  .stats .row-qty {
+    flex-direction: row;
+  }
+
+  .stats .row-qty .qty {
+    font-size: 5rem;
+  }
+
+  .stats .row-qty .qty-desc {
+    font-size: 1.5rem;
+  }
+
+  .subscription .image {
+    display: none;
+  }
+
+  .footer .row-top {
+    grid-template-columns: 3fr 1fr;
+  }
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  #menu-tablet a.show-on-mobile {
+    display: none;
+  }
+}
+
+/* mobile */
+@media screen and (max-width: 767) {
+}

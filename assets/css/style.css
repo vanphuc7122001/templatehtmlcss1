@@ -57,7 +57,7 @@ a {
   background-color: #e6f0ff;
   padding-top: 25px;
   position: sticky;
-  top: 0;
+  top: -22px;
   z-index: 1;
 }
 
@@ -319,7 +319,8 @@ a {
 
 .featured .list {
   margin-top: 70px;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
 
@@ -596,9 +597,9 @@ a {
   padding: 50px 0;
 }
 
-.footer .row {
-  display: flex;
-  justify-content: space-between;
+.footer .row-top {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .footer .row .column .heading {
@@ -629,6 +630,8 @@ a {
 
 .row-footer {
   margin-top: 81px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .row-footer .desc {
